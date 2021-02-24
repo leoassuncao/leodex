@@ -28,8 +28,8 @@ data class Pokemon (
     @SerializedName("weight")
     var weight: String? = null
 ): Serializable {
-    fun getNumber(pokemonUrl: String): Int {
 
+    fun getNumber(pokemonUrl: String): Int {
         return pokemonUrl.substringAfter("pokemon/").substringBefore('/').toInt()
     }
 }

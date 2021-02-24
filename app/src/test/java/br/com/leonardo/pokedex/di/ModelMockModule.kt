@@ -6,11 +6,10 @@ import org.koin.dsl.module
 
 /**
  * @author Leonardo Assunção
- * @since 22/02/21
+ * @since 24/02/21
  **/
 
-
-val modelModule = module {
+val modelMockModule = module {
     factory { Pokemon() }
     factory { PokemonDetail(stats = get(),types = get()) }
     factory { PokemonDetail.Types(type = get()) }
