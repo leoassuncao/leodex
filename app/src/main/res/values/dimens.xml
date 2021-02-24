@@ -12,6 +12,14 @@
     <dimen name="pokemon_detail_type_unique_padding">6dp</dimen>
     <dimen name="pokemon_detail_weight_margin_top">24dp</dimen>
     <dimen name="pokemon_detail_weight_text_size">21sp</dimen>
+    <dimen name="pokemon_detail_base_stats_margin_top">12dp</dimen>
+    <dimen name="pokemon_detail_stat_margin_start">32dp</dimen>
+    <dimen name="pokemon_detail_stat_margin_top">5dp</dimen>
+    <dimen name="pokemon_detail_stat_progress_bar_height">18dp</dimen>
+    <dimen name="pokemon_detail_stat_progress_bar_margin_start_end">32dp</dimen>
+    <dimen name="pokemon_detail_stat_progress_bar_label_size">12sp</dimen>
+    <dimen name="pokemon_detail_stat_progress_bar_radius">12dp</dimen>
+
 
 
 

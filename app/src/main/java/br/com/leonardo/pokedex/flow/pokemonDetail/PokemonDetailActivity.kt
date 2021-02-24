@@ -19,14 +19,12 @@ import kotlinx.android.synthetic.main.activity_pokemon_detail.*
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-
 /**
  * @author Leonardo Assunção
  * @since 22/02/21
  **/
 
 class PokemonDetailActivity : AppCompatActivity() {
-    private val activityPresenter: ILoadingPresenter by inject()
 
     private val detailViewModel by viewModel<PokemonDetailViewModel>()
     private lateinit var pokemon: Pokemon
