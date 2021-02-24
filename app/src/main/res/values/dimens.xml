@@ -12,6 +12,7 @@
     <dimen name="main_activity_sprite_margin">20dp</dimen>
     <dimen name="main_activity_pokemon_number_text_size">16sp</dimen>
     <dimen name="main_activity_pokemon_number_margin">5dp</dimen>
+    <dimen name="loading_ball_width_height">100dp</dimen>
 
     <!-- Pokemon Detail activity -->
     <dimen name="pokemon_detail_name_margin_top">24dp</dimen>

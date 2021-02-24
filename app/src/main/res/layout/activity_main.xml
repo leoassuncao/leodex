@@ -18,8 +18,8 @@
     <ProgressBar
         android:id="@+id/mainLoading"
         style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/loading_ball_width_height"
+        android:layout_height="@dimen/loading_ball_width_height"
         android:visibility="gone"
         android:indeterminateDrawable="@drawable/pokeball_loading"
         app:layout_constraintBottom_toBottomOf="parent"
