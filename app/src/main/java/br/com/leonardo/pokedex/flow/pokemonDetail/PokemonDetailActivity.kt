@@ -47,7 +47,7 @@ class PokemonDetailActivity : AppCompatActivity() {
         pokemon = intent.getSerializableExtra(EXTRA_POKEMON) as Pokemon
         detailViewModel.getPokemon(pokemon.getNumber(pokemon.url))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        setupObservables()`
+        setupObservables()
     }
 
     override fun onSupportNavigateUp(): Boolean {
