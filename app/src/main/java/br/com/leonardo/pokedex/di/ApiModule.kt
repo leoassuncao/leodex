@@ -14,5 +14,4 @@ val apiModule = module {
     single {
         get<Retrofit>().create(PokedexApi::class.java)
     }
-
 }

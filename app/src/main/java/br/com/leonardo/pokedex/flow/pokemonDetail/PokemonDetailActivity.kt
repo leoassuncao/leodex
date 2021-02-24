@@ -162,7 +162,6 @@ class PokemonDetailActivity : AppCompatActivity() {
                     TypeUtils.getTypeColor(types.first().type.typeName)
                 )
             )
-
         }
     }
 }

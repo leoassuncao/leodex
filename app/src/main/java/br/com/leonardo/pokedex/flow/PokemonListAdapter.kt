@@ -22,7 +22,6 @@ class PokemonListAdapter(private val list: List<Pokemon>)
     override fun onBindViewHolder(holder: PokemonListViewHolder, position: Int) {
         val pokemon: Pokemon = list[position]
         holder.bind(pokemon)
-
     }
 
     override fun getItemCount(): Int = list.size

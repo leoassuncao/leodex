@@ -11,9 +11,8 @@ import com.google.gson.Gson
  **/
 
 class PokedexService(
-    internal  val pokedexApi: PokedexApi,
-    gson: Gson
-) : IPokedexService, BaseService(gson){
+    internal  val pokedexApi: PokedexApi
+) : IPokedexService{
 
     override suspend fun getAllPokemon(): List<Pokemon>? {
         val response = pokedexApi.getAllPokemon()

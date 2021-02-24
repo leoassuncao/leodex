@@ -1,54 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="200dp"
     android:id="@+id/pokemonCard"
-    android:layout_margin="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_activity_card_view_height"
+    android:layout_margin="@dimen/main_activity_card_view_margin"
     android:foreground="?attr/selectableItemBackground"
-    app:cardCornerRadius="14dp"
-    app:cardElevation="4dp">
+    app:cardCornerRadius="@dimen/main_activity_card_view_corner"
+    app:cardElevation="@dimen/main_activity_card_view_elevation">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/pokemonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bulbassauro"
-        android:elevation="4dp"
-        android:gravity="center"
-        android:maxLines="1"
-        android:padding="12dp"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pokemonSprite"
-        android:textAllCaps="true"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pokemonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="@dimen/main_activity_pokemon_name_padding"
+            android:textAllCaps="true"
+            android:textSize="@dimen/main_activity_pokemon_name_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pokemonSprite" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/pokemonSprite"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_margin="20dp"
-        android:scaleType="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/pokemonSprite"
+            android:layout_width="@dimen/main_activity_sprite_height_width"
+            android:layout_height="@dimen/main_activity_sprite_height_width"
+            android:layout_margin="@dimen/main_activity_sprite_margin"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/pokemonNumber"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textStyle="bold"
-        android:layout_margin="5dp"
-        android:text="#001"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pokemonNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_activity_pokemon_number_margin"
+            android:textSize="@dimen/main_activity_pokemon_number_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

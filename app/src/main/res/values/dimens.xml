@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Main Activity -->
+    <dimen name="main_activity_card_view_height">200dp</dimen>
+    <dimen name="main_activity_card_view_margin">6dp</dimen>
+    <dimen name="main_activity_card_view_corner">14dp</dimen>
+    <dimen name="main_activity_card_view_elevation">4dp</dimen>
+    <dimen name="main_activity_pokemon_name_padding">12dp</dimen>
+    <dimen name="main_activity_pokemon_name_text_size">16sp</dimen>
+    <dimen name="main_activity_sprite_height_width">120dp</dimen>
+    <dimen name="main_activity_sprite_margin">20dp</dimen>
+    <dimen name="main_activity_pokemon_number_text_size">16sp</dimen>
+    <dimen name="main_activity_pokemon_number_margin">5dp</dimen>
+
     <!-- Pokemon Detail activity -->
     <dimen name="pokemon_detail_name_margin_top">24dp</dimen>
     <dimen name="pokemon_detail_name_margin_bottom">36dp</dimen>
@@ -19,8 +31,5 @@
     <dimen name="pokemon_detail_stat_progress_bar_margin_start_end">32dp</dimen>
     <dimen name="pokemon_detail_stat_progress_bar_label_size">12sp</dimen>
     <dimen name="pokemon_detail_stat_progress_bar_radius">12dp</dimen>
-
-
-
 
 </resources>

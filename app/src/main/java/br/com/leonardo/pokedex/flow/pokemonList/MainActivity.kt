@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-
     }
 
     private fun updatePokemonList(pokemonList: List<Pokemon>) {
@@ -53,5 +52,4 @@ class MainActivity : AppCompatActivity() {
         }
         activityPresenter.hideLoading()
     }
-
 }

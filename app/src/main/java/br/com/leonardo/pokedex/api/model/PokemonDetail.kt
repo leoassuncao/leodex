@@ -1,10 +1,6 @@
 package br.com.leonardo.pokedex.api.model
 
-import br.com.leonardo.pokedex.api.model.SpriteDto
-import br.com.leonardo.pokedex.api.model.TypeDto
-import com.google.gson.annotations.JsonAdapter
 import com.google.gson.annotations.SerializedName
-import java.sql.Types
 
 /**
  * @author Leonardo Assunção

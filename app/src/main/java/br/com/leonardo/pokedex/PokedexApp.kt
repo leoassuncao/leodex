@@ -34,12 +34,8 @@ class PokedexApp : MultiDexApplication() {
             androidContext(this@PokedexApp)
             modules(
                 listOf(
-//                    handlerModule,
                     apiModule,
-//                    flowModule,
                     networkModule,
-//                    adapterModule,
-//                    helperModule,
                     modelModule,
                     presenterModule,
                     serviceModule,

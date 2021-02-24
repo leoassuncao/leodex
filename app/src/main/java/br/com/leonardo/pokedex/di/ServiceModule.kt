@@ -11,6 +11,5 @@ import org.koin.dsl.module
 
 val serviceModule = module {
     //Session
-    single { PokedexService(get(), get()) as IPokedexService }
-
+    single { PokedexService(get()) as IPokedexService }
 }

@@ -25,7 +25,6 @@ class PokemonListViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
     private var pokemonSprite: ImageView
     private var pokemonNumber: TextView? = null
 
-
     init {
         pokemonName = itemView.findViewById(R.id.pokemonName)
         pokemonCard = itemView.findViewById(R.id.pokemonCard)
@@ -50,7 +49,4 @@ class PokemonListViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .into(pokemonSprite)
     }
-
-
-
 }
