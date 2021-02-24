@@ -16,6 +16,12 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -104,6 +110,8 @@ dependencies {
     })
     androidTestImplementation 'androidx.test:rules:1.2.0'
     androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.1'
-    testImplementation "io.mockk:mockk:1.9.3"
+    testImplementation "io.mockk:mockk:1.10.2"
     androidTestImplementation "io.mockk:mockk-android:1.9.3"
+    testImplementation 'org.robolectric:robolectric:4.3'
+
 }

@@ -14,6 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.jetbrains.annotations.TestOnly
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -51,5 +52,10 @@ class MainActivity : AppCompatActivity() {
             adapter = PokemonListAdapter(pokemonList)
         }
         activityPresenter.hideLoading()
+    }
+
+    @TestOnly
+    fun setTestViewModel(testViewModel: MainViewModel) {
+        viewModel
     }
 }
