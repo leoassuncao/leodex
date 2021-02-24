@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Pokedex</string>
+
+    <!--Pokemon Detail Activity -->
+    <string name="pokemon_detail_weight">Weight</string>
+    <string name="pokemon_detail_height">Height</string>
+    <string name="pokemon_detail_base_stats">Base Stats</string>
+    <string name="pokemon_detail_health">HPS</string>
+    <string name="pokemon_detail_attack">ATK</string>
+    <string name="pokemon_detail_defense">DEF</string>
+    <string name="pokemon_detail_special_attack">SAT</string>
+    <string name="pokemon_detail_special_defense">SDE</string>
+    <string name="pokemon_detail_speed">SPD</string>
+    <string name="pokemon_detail_experience">EXP</string>
 </resources>

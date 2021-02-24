@@ -9,19 +9,17 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="32dp">
+            android:layout_height="match_parent">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/pokemonDetailName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="36dp"
+                android:layout_marginTop="@dimen/pokemon_detail_name_margin_top"
+                android:layout_marginBottom="@dimen/pokemon_detail_name_margin_top"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                android:textSize="36sp"
+                android:textSize="@dimen/pokemon_detail_name_text_size"
                 android:textStyle="bold"
-                android:translationZ="100dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pokemonDetailHeader" />
@@ -29,92 +27,87 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/pokemonDetailHeader"
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
-                android:elevation="9dp"
+                android:layout_height="@dimen/pokemon_detail_header_height"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/pokemonDetailSprite"
-                android:layout_width="190dp"
-                android:layout_height="190dp"
-                android:layout_marginBottom="20dp"
+                android:layout_width="@dimen/pokemon_detail_sprite_height_width"
+                android:layout_height="@dimen/pokemon_detail_sprite_height_width"
+                android:layout_marginBottom="@dimen/pokemon_detail_sprite_margin_bottom"
                 android:scaleType="center"
-                android:translationZ="100dp"
                 app:layout_constraintBottom_toBottomOf="@id/pokemonDetailHeader"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
-
 
             <com.battleent.ribbonviews.RibbonTag
                 android:id="@+id/pokemonDetailTypeUnique"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/pokemon_detail_type_unique_margin"
                 android:textAllCaps="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pokemonDetailName"
-                app:tag_padding_left="6dp"
-                app:tag_padding_right="6dp"
+                app:tag_padding_left="@dimen/pokemon_detail_type_unique_padding"
+                app:tag_padding_right="@dimen/pokemon_detail_type_unique_padding"
                 app:tag_ribbonRadius="5" />
 
             <com.battleent.ribbonviews.RibbonTag
                 android:id="@+id/pokemonDetailTypeOne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/pokemon_detail_type_unique_margin"
                 android:textAllCaps="true"
                 app:layout_constraintEnd_toStartOf="@id/pokemonDetailTypeTwo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pokemonDetailName"
-                app:tag_padding_left="6dp"
-                app:tag_padding_right="6dp"
-                app:tag_ribbonColor="#cdda0b23"
+                app:tag_padding_left="@dimen/pokemon_detail_type_unique_padding"
+                app:tag_padding_right="@dimen/pokemon_detail_type_unique_padding"
                 app:tag_ribbonRadius="5" />
 
             <com.battleent.ribbonviews.RibbonTag
                 android:id="@+id/pokemonDetailTypeTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/pokemon_detail_type_unique_margin"
                 android:textAllCaps="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/pokemonDetailTypeOne"
                 app:layout_constraintTop_toBottomOf="@id/pokemonDetailName"
-                app:tag_padding_left="6dp"
-                app:tag_padding_right="6dp"
-                app:tag_ribbonColor="#cdda0b23"
+                app:tag_padding_left="@dimen/pokemon_detail_type_unique_padding"
+                app:tag_padding_right="@dimen/pokemon_detail_type_unique_padding"
                 app:tag_ribbonRadius="5" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/pokemonDetailWeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:textSize="21sp"
+                android:layout_marginTop="@dimen/pokemon_detail_weight_margin_top"
+                android:textSize="@dimen/pokemon_detail_weight_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@id/pokemonDetailHeight"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pokemonDetailTypeTwo"
-                tools:text="24.0 KG" />
+                tools:text="100K" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/pokemonDetailHeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="21sp"
+                android:textSize="@dimen/pokemon_detail_weight_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/pokemonDetailWeight"
                 app:layout_constraintTop_toTopOf="@id/pokemonDetailWeight"
-                tools:text="11 M" />
+                tools:text="10m" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/pokemonDetailWeightTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Weight"
+                android:text="@string/pokemon_detail_weight"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@id/pokemonDetailHeight"
                 app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +117,7 @@
                 android:id="@+id/pokemonDetailHeightTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Height"
+                android:text="@string/pokemon_detail_height"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/pokemonDetailWeight"
@@ -135,7 +128,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="Base Stats"
+                android:text="@string/pokemon_detail_base_stats"
                 android:textSize="21sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -148,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
-                android:text="HPS"
+                android:text="@string/pokemon_detail_health"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pokemonDetailBaseStats" />
@@ -174,7 +167,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
-                android:text="ATK"
+                android:text="@string/pokemon_detail_attack"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pokemonDetailHp" />
@@ -200,7 +193,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
-                android:text="DEF"
+                android:text="@string/pokemon_detail_defense"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pokemonDetailAttack" />
@@ -226,7 +219,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
-                android:text="SAT"
+                android:text="@string/pokemon_detail_special_attack"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pokemonDetailDefense" />
@@ -252,7 +245,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
-                android:text="SDE"
+                android:text="@string/pokemon_detail_special_defense"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pokemonDetailSpecialAttack" />
@@ -278,7 +271,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
-                android:text="SPD"
+                android:text="@string/pokemon_detail_speed"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pokemonDetailSpecialDefense" />
@@ -304,7 +297,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
-                android:text="EXP"
+                android:text="@string/pokemon_detail_experience"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pokemonDetailSpeed" />

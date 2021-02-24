@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Pokemon Detail activity -->
+    <dimen name="pokemon_detail_name_margin_top">24dp</dimen>
+    <dimen name="pokemon_detail_name_margin_bottom">36dp</dimen>
+    <dimen name="pokemon_detail_name_text_size">36sp</dimen>
+    <dimen name="pokemon_detail_header_height">260dp</dimen>
+    <dimen name="pokemon_detail_sprite_height_width">190dp</dimen>
+    <dimen name="pokemon_detail_sprite_margin_bottom">20dp</dimen>
+    <dimen name="pokemon_detail_type_unique_margin">10dp</dimen>
+    <dimen name="pokemon_detail_type_unique_padding">6dp</dimen>
+    <dimen name="pokemon_detail_weight_margin_top">24dp</dimen>
+    <dimen name="pokemon_detail_weight_text_size">21sp</dimen>
+
+
+
+</resources>

@@ -45,8 +45,8 @@ class PokemonDetailActivity : AppCompatActivity() {
 
         fun startActivity(pokemon: Pokemon, context: Context) {
             val intent = Intent(context, PokemonDetailActivity::class.java)
-               intent.putExtra(EXTRA_POKEMON, pokemon)
-                context.startActivity(intent)
+            intent.putExtra(EXTRA_POKEMON, pokemon)
+            context.startActivity(intent)
         }
     }
 
@@ -94,22 +94,49 @@ class PokemonDetailActivity : AppCompatActivity() {
     }
 
     private fun populateTypes(types: List<PokemonDetail.Types>) {
-        pokemonDetailHeader.setBackgroundColor(ContextCompat.getColor(this, TypeUtils.getTypeColor(types.first().type.typeName)))
-        supportActionBar?.setBackgroundDrawable(ColorDrawable( ContextCompat.getColor(this, TypeUtils.getTypeColor(types.first().type.typeName))))
-        if(types.size == 2) {
+        pokemonDetailHeader.setBackgroundColor(
+            ContextCompat.getColor(
+                this,
+                TypeUtils.getTypeColor(types.first().type.typeName)
+            )
+        )
+        supportActionBar?.setBackgroundDrawable(
+            ColorDrawable(
+                ContextCompat.getColor(
+                    this,
+                    TypeUtils.getTypeColor(types.first().type.typeName)
+                )
+            )
+        )
+        if (types.size == 2) {
             pokemonDetailTypeUnique.visibility = View.GONE
             pokemonDetailTypeOne.visibility = View.VISIBLE
             pokemonDetailTypeTwo.visibility = View.VISIBLE
             pokemonDetailTypeOne.text = types.first().type.typeName
             pokemonDetailTypeTwo.text = types.last().type.typeName
-            pokemonDetailTypeOne.setRibbonColor(ContextCompat.getColor(this, TypeUtils.getTypeColor(types.first().type.typeName)))
-            pokemonDetailTypeTwo.setRibbonColor(ContextCompat.getColor(this, TypeUtils.getTypeColor(types.last().type.typeName)))
+            pokemonDetailTypeOne.setRibbonColor(
+                ContextCompat.getColor(
+                    this,
+                    TypeUtils.getTypeColor(types.first().type.typeName)
+                )
+            )
+            pokemonDetailTypeTwo.setRibbonColor(
+                ContextCompat.getColor(
+                    this,
+                    TypeUtils.getTypeColor(types.last().type.typeName)
+                )
+            )
         } else {
             pokemonDetailTypeUnique.visibility = View.VISIBLE
             pokemonDetailTypeOne.visibility = View.GONE
             pokemonDetailTypeTwo.visibility = View.GONE
             pokemonDetailTypeUnique.text = types.first().type.typeName
-            pokemonDetailTypeUnique.setRibbonColor(ContextCompat.getColor(this, TypeUtils.getTypeColor(types.first().type.typeName)))
+            pokemonDetailTypeUnique.setRibbonColor(
+                ContextCompat.getColor(
+                    this,
+                    TypeUtils.getTypeColor(types.first().type.typeName)
+                )
+            )
 
         }
     }
