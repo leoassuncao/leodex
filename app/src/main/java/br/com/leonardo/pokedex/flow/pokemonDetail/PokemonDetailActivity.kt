@@ -2,16 +2,12 @@ package br.com.leonardo.pokedex.flow.pokemonDetail
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
-import androidx.lifecycle.Observer
 import br.com.leonardo.pokedex.R
 import br.com.leonardo.pokedex.api.model.Pokemon
 import br.com.leonardo.pokedex.api.model.PokemonDetail
@@ -19,15 +15,10 @@ import br.com.leonardo.pokedex.flow.main.ILoadingPresenter
 import br.com.leonardo.pokedex.utils.TypeUtils
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_pokemon_detail.*
-import kotlinx.android.synthetic.main.main_pokemon_list_item.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 /**
  * @author Leonardo Assunção
@@ -56,9 +47,13 @@ class PokemonDetailActivity : AppCompatActivity() {
         pokemon = intent.getSerializableExtra(EXTRA_POKEMON) as Pokemon
         detailViewModel.getPokemon(pokemon.getNumber(pokemon.url))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        setupObservables()
+        setupObservables()`
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
+    }
 
     private fun setupObservables() {
         detailViewModel.pokemonResponse?.observe(this, ::populateUi)
