@@ -4,19 +4,16 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import br.com.leonardo.pokedex.R
 import br.com.leonardo.pokedex.api.model.Pokemon
 import br.com.leonardo.pokedex.api.model.PokemonDetail
-import br.com.leonardo.pokedex.flow.main.ILoadingPresenter
 import br.com.leonardo.pokedex.utils.TypeUtils
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import kotlinx.android.synthetic.main.activity_pokemon_detail.*
-import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /**
@@ -31,6 +28,12 @@ class PokemonDetailActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_POKEMON = "EXTRA_POKEMON"
+        const val HP = "hp"
+        const val ATTACK = "attack"
+        const val DEFENSE = "defense"
+        const val SPECIAL_ATTACK = "special-attack"
+        const val SPECIAL_DEFENSE = "special-defense"
+        const val SPEED = "speed"
 
         fun startActivity(pokemon: Pokemon, context: Context) {
             val intent = Intent(context, PokemonDetailActivity::class.java)
@@ -68,22 +71,51 @@ class PokemonDetailActivity : AppCompatActivity() {
         pokemonDetailName.text = pokemonDetail.name.capitalize()
         pokemonDetailWeight.text = pokemonDetail.weight.toString() + "KG"
         pokemonDetailHeight.text = pokemonDetail.height.toString() + "M"
-        pokemonDetailProgressHp.progress = pokemonDetail.stats.first().baseStat.toFloat()
-        pokemonDetailProgressHp.labelText = pokemonDetail.stats.first().baseStat.toString()
-        pokemonDetailProgressAttack.progress = pokemonDetail.stats[1].baseStat.toFloat()
-        pokemonDetailProgressAttack.labelText = pokemonDetail.stats[1].baseStat.toString()
-        pokemonDetailProgressDefense.progress = pokemonDetail.stats[2].baseStat.toFloat()
-        pokemonDetailProgressDefense.labelText = pokemonDetail.stats[2].baseStat.toString()
-        pokemonDetailProgressSpecialAttack.progress = pokemonDetail.stats[3].baseStat.toFloat()
-        pokemonDetailProgressSpecialAttack.labelText = pokemonDetail.stats[3].baseStat.toString()
-        pokemonDetailProgressSpecialDefense.progress = pokemonDetail.stats[4].baseStat.toFloat()
-        pokemonDetailProgressSpecialDefense.labelText = pokemonDetail.stats[5].baseStat.toString()
-        pokemonDetailProgressSpeed.progress = pokemonDetail.stats[5].baseStat.toFloat()
-        pokemonDetailProgressSpeed.labelText = pokemonDetail.stats[5].baseStat.toString()
+
+        pokemonDetail.stats.forEach {
+            when (it.stat.statName) {
+                HP -> populateHp(it)
+                ATTACK -> populateAttack(it)
+                DEFENSE -> populateDefense(it)
+                SPECIAL_ATTACK -> populateSpecialAttack(it)
+                SPECIAL_DEFENSE -> populateSpecialDefense(it)
+                SPEED -> populateSpeed(it)
+            }
+        }
         pokemonDetailProgressExperience.progress = pokemonDetail.experience.toFloat()
         pokemonDetailProgressExperience.labelText = pokemonDetail.experience.toString()
 
         populateTypes(pokemonDetail.types)
+    }
+
+    private fun populateHp(stat: PokemonDetail.Stats) {
+        pokemonDetailProgressHp.progress = stat.baseStat.toFloat()
+        pokemonDetailProgressHp.labelText = stat.baseStat.toString()
+    }
+
+    private fun populateAttack(stat: PokemonDetail.Stats) {
+        pokemonDetailProgressAttack.progress = stat.baseStat.toFloat()
+        pokemonDetailProgressAttack.labelText = stat.baseStat.toString()
+    }
+
+    private fun populateDefense(stat: PokemonDetail.Stats) {
+        pokemonDetailProgressDefense.progress = stat.baseStat.toFloat()
+        pokemonDetailProgressDefense.labelText = stat.baseStat.toString()
+    }
+
+    private fun populateSpecialAttack(stat: PokemonDetail.Stats) {
+        pokemonDetailProgressSpecialAttack.progress = stat.baseStat.toFloat()
+        pokemonDetailProgressSpecialAttack.labelText = stat.baseStat.toString()
+    }
+
+    private fun populateSpecialDefense(stat: PokemonDetail.Stats) {
+        pokemonDetailProgressSpecialDefense.progress = stat.baseStat.toFloat()
+        pokemonDetailProgressSpecialDefense.labelText = stat.baseStat.toString()
+    }
+
+    private fun populateSpeed(stat: PokemonDetail.Stats) {
+        pokemonDetailProgressSpeed.progress = stat.baseStat.toFloat()
+        pokemonDetailProgressSpeed.labelText = stat.baseStat.toString()
     }
 
     private fun populateTypes(types: List<PokemonDetail.Types>) {
